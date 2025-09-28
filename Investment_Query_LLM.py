@@ -159,7 +159,7 @@ if run_button:
 
 # Hugging Face API Key
 
-HF_API_KEY=st.secrets("HF_API_KEY")   # store token in streamlit secrets
+HF_API_KEY=st.secrets["HF_API_KEY"]   # store token in streamlit secrets
 headers = {"Authorization": f"Bearer {HF_API_KEY}"}      # headers will be passed as Autorized Key to connect to Hugging Face
 
 # Updated Available Models (verified working models)
