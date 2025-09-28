@@ -1,10 +1,7 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-#import requests
 import os
-#from transformers import pipeline
-#from langchain_community.llms import HuggingFaceHub 
 from openai import OpenAI
 # ================================
 # 🎨 Streamlit Page Config
@@ -90,7 +87,7 @@ st.markdown("<div class='sub-title'>Run SQL queries directly on the Investment I
 # ================================
 
 # DB Connection
-DB_PATH = r"/Users/pulkitsharan/Downloads/Investment_Incetive.db"
+DB_PATH = os.path.join(os.path.dirname(__file__), 'Incentive.db')
 
 
 # Function to fetch data
@@ -161,8 +158,8 @@ if run_button:
 
 
 # Hugging Face API Key
-#HF_API_KEY = os.getenv("HF_API_KEY")  # store token in env variable
-HF_API_KEY="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"
+
+HF_API_KEY=st.secrets("HF_API_KEY")   # store token in streamlit secrets
 headers = {"Authorization": f"Bearer {HF_API_KEY}"}      # headers will be passed as Autorized Key to connect to Hugging Face
 
 # Updated Available Models (verified working models)
