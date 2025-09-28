@@ -1,0 +1,11 @@
+streamlit
+pandas
+numpy
+openpyxl
+xlsxwriter
+pyxlsb
+transformers
+openai
+langchain_community
+huggingface_hub
+chardet
