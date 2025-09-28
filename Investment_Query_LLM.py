@@ -7,7 +7,7 @@ from openai import OpenAI
 # 🎨 Streamlit Page Config
 # ================================
 st.set_page_config(
-    page_title="💰 Investment Incentive Query Tool",
+    page_title="Investment Incentive Query Tool",
     page_icon="💰",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -233,4 +233,5 @@ if analyze_button:
 
         st.markdown("</div>", unsafe_allow_html=True)
     except Exception as e:
+
         st.error(f"❌ Error analyzing data: {e}")
